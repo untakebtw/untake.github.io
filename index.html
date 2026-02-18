@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untake | Bio</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.08);
+            --accent: #f1f1f1;
+        }
+
+        body {
+            background-color: var(--bg);
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(255, 120, 0, 0.08) 0%, transparent 35%),
+                radial-gradient(circle at 85% 85%, rgba(120, 0, 255, 0.08) 0%, transparent 35%);
+            color: var(--accent);
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(30px) saturate(150%);
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 380px;
+            text-align: center;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            margin-bottom: 15px;
+            background: #1a1a1a;
+        }
+
+        h1 { font-size: 28px; font-weight: 700; margin: 0; letter-spacing: -0.5px; }
+        .subtitle { color: #8b949e; font-size: 14px; margin: 5px 0 30px; }
+
+        .section-title {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #555;
+            letter-spacing: 2px;
+            margin: 20px 0 10px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .wallet-item {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            color: var(--accent);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 18px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .wallet-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.02);
+        }
+
+        .wallet-name { font-weight: 500; font-size: 15px; }
+        .copy-icon { opacity: 0.4; font-size: 12px; }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #444;
+        }
+
+        .footer a { color: #666; text-decoration: none; transition: 0.3s; }
+        .footer a:hover { color: #aaa; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://github.com/untakebtw.png" alt="Untake" class="avatar">
+        <h1>Untake</h1>
+        <div class="subtitle">Crypto Portfolio & Bio</div>
+        
+        <div class="section-title">Main Assets</div>
+        <div class="wallet-item" onclick="copyText('bc1qfgr9jqt06h9nnfcs5gsmjp5t90gvjtz43ekhat')">
+            <span class="wallet-name">Bitcoin</span>
+            <span class="copy-icon">Copy</span>
+        </div>
+        <div class="wallet-item" onclick="copyText('8yBYWNHbT5fYDt7CFrn1tYJbvBgZvY4uDYTfXPxqQW37')">
+            <span class="wallet-name">Solana</span>
+            <span class="copy-icon">Copy</span>
+        </div>
+        <div class="wallet-item" onclick="copyText('UQBBtAo36Yi310G_89xOGs5Du7h0mLSXpx2pZ7_yyxu1Ez5l')">
+            <span class="wallet-name">TON</span>
+            <span class="copy-icon">Copy</span>
+        </div>
+        <div class="wallet-item" onclick="copyText('0x6c1c0c34DFAD33874fd91AB7FE8027E7A916eCCb')">
+            <span class="wallet-name">BNB / BEP20</span>
+            <span class="copy-icon">Copy</span>
+        </div>
+        <div class="wallet-item" onclick="copyText('TLVXW6V7vAsHEY5TmppHXwYMFpSSNWs2s9')">
+            <span class="wallet-name">TRC20 / TRX</span>
+            <span class="copy-icon">Copy</span>
+        </div>
+        <div class="wallet-item" onclick="copyText('addr1q8mu05gtrs5fq8u6jel5994pmgl0vvxua3dj2n6wk59znmmzvmq0sme4038hue4n6g42veh8lv86alc66h3xxx33wv5sg9uaku')">
+            <span class="wallet-name">ADA</span>
+            <span class="copy-icon">Copy</span>
+        </div>
+
+        <div class="footer">
+            Template by <a href="https://github.com/untakebtw" target="_blank">untake</a>
+        </div>
+    </div>
+
+    <script>
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Адрес скопирован!');
+            });
+        }
+    </script>
+</body>
+</html>
